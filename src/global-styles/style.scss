@@ -1,0 +1,170 @@
+/// Main Styles File
+/// Here we import all the global Styles files we need for our project.
+
+@import "styles/normalize.scss";
+@import "styles/root.scss";
+@import "styles/fonts.scss";
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--color-primary);
+  font-size: 16px;
+  background-color: #EDEDED;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin: 0;
+  margin-top: 200px;
+  overflow: hidden;
+}
+
+p {
+  color: var(--color-on-surface);
+}
+
+.blog-card {
+  max-width: 700px;
+  padding: 16px;
+  margin: 16px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  flex-grow: 0;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
+  box-shadow: 4px 4px 4px #CECECE;
+}
+
+.blog-card-main-content {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  flex-grow: 0;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bc-image-component {
+  border-radius: 10px;
+  transition: transform .5s;
+}
+
+.user-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+}
+
+.user-information-component {
+  display: flex;
+  align-items: center;
+}
+
+.user-image-component {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.user-name-label {
+  padding-left: 16px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.hour-label {
+  padding-right: 16px;
+  color: #838383;
+  font-size: 14px;
+}
+
+.article-title-label {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  padding-top: 24px;
+}
+
+.article-content {
+  padding-top: 16px;
+  color: #838383;
+  font-size: 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.read-more-button {
+  color: #000000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  padding-top: 24px;
+  transition: all .5s;
+}
+
+.read-more-button > img {
+  padding-left: 8px;
+}
+
+@media (max-width: 1024px) {
+  .blog-card {
+    max-width: 550px;
+  }
+}
+
+@media (max-width: 425px) {  
+  body {
+    font-size: 14px;
+  }
+
+  .blog-card {
+    max-width: 330px;}
+
+  .user-name-label .hour-label {
+    font-size: 12px;
+  }
+
+  .article-title-label {
+    font-size: 18px;
+  }
+
+  .article-content {
+    font-size: 14px;
+  }
+
+  .title-component {
+    font-size: 32px;
+  }
+}
+
+.blog-card:hover {
+  .bc-image-component {
+    transform: scale(1.05);
+  }
+
+  .read-more-button {
+    text-decoration: underline;
+  }
+}
+
+a:link {
+      text-decoration: none;
+}
+
+a:visited {
+      text-decoration: none;
+}
+
+a:hover {
+      text-decoration: none;
+}
+
+a:active {
+      text-decoration: none;
+}
